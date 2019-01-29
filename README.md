@@ -6,9 +6,11 @@ The workshop is for users The workshop last a day and is split into two main sec
 
 Please bring your laptop with a Google chrome browser installed.
 
+__User Workshop Agenda__
+
 |  .        |  .    |  .
 | :---      | :---: | :---
-| __Day 1__ |       | __User workshop__
+
 | Morning   |       |
 |           | 09:00 | __Start__
 |           |       | concepts (e.g. measurements, table, computed table)
