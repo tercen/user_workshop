@@ -10,7 +10,6 @@ __User Workshop Agenda__
 
 |  .        |  .    |  .
 | :---      | :---: | :---
-
 | Morning   |       |
 |           | 09:00 | __Start__
 |           |       | concepts (e.g. measurements, table, computed table)
