@@ -1,4 +1,4 @@
-Tercen is a powerful next generation, collaborative analysis tool. It aims to "empower" the researcher and "liberate" the bioinformatician.
+Tercen is a powerful next generation, collaborative analysis tool.  It aims for the democratisation of data analytics and the empowerment of life scientists with code-free data analysis tools.
 
 # Tercen User Workshop
 
