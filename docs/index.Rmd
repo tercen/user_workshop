@@ -56,7 +56,7 @@ __Bioinformatician's__ challenges:
 * Cloud hosted or on-site
 * Zero install
 
-<center><img src="images/tercen_collaboration.png"></center>
+<center><img src="../images/tercen_collaboration.png"></center>
 
 
 ## Concepts and terms
@@ -179,7 +179,7 @@ pie(c(80,20), labels=c("Wrangle", "Compute"), main="Where is time spent?", col=c
 
 ## Coffee break
 
-<center><img src="images/coffee.png"/></center>
+<center><img src="../images/coffee.png"/></center>
 
 # Part 2
 

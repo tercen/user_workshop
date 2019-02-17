@@ -6,6 +6,14 @@ The workshop is for users The workshop last a day and is split into two main sec
 
 Please bring your laptop with a Google chrome browser installed.
 
+# Presentation
+
+The presentation is found at:
+
+https://tercen.github.io/user_workshop
+
+# Agenda
+
 __User Workshop Agenda__
 
 |  .        |  .    |  .
