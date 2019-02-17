@@ -18,7 +18,7 @@ __User Workshop Agenda__
 |           |       | creating views (e.g. heatmaps, line graphs, profiles)
 |           |       | data wrangling (e.g. gather, join)
 |           |       | pre-processing data (e.g. log, arsinh)
-|           |       | two group comparison (e.g. t-test, anova)
+|           |       | group comparisons (e.g. t-test, anova)
 |           | 10:15 | __Coffee__
 |           | 10:30 | dimension reduction (e.g. pca, tsne)
 |           |       | clustering (e.g. hierarchical clustering)
