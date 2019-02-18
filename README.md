@@ -8,7 +8,7 @@ Please bring your laptop with a Google chrome browser installed.
 
 # Presentation
 
-The presentation is found at:
+The presentation is online at:
 
 https://tercen.github.io/user_workshop
 

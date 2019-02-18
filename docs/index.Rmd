@@ -9,6 +9,9 @@ knitr::opts_chunk$set(echo = FALSE)
 
 # Part 1
 
+## Welcome
+<center><img src="../images/sunrise.gif"></center>
+
 ## Agenda
 
 - intro to Tercen
@@ -41,13 +44,11 @@ __Bioinformatician's__ challenges:
 * Reduce time spent on IT support
 
 ## Features
-
 * Generate any visual
 * Visual computation
 * Workflow analysis and customization
 * Integrate external knowledge
-* Sharing analysis
-* Sharing data
+* Sharing data and analysis
 * Results reporting
 * Project centric analysis
 * Data provenance
@@ -125,6 +126,8 @@ pie(c(80,20), labels=c("Wrangle", "Compute"), main="Where is time spent?", col=c
 - add a Table step
 - add a Data step
 
+
+
 ## Cross-tab zone
 
 - left area are factors in the factor zone
@@ -148,6 +151,10 @@ pie(c(80,20), labels=c("Wrangle", "Compute"), main="Where is time spent?", col=c
 
 - create a heatmap
 
+## Welcome to Tercen
+<center><img src="../images/welldone.png"/></center>
+
+<center>...welcome to Tercen...</center>
 
 ## Navigating heatmap
 
@@ -168,14 +175,21 @@ pie(c(80,20), labels=c("Wrangle", "Compute"), main="Where is time spent?", col=c
 
 ## Save workflow
 
-- save 
+- save icon on workflow tab
+- icon dissappears when saved
 
 ## Project Navigation 
 
-- Go to the team
-- Go to the project
-- Go to the workflow
-- Go to the data
+To go up:
+The top left icon allows you to navigate to up one level
+
+- click on folder icon, to get up to project
+- click on people icon, to get up to team
+
+To go down:
+- click on project
+- click on workflow
+- click on data
 
 ## Coffee break
 
@@ -183,8 +197,11 @@ pie(c(80,20), labels=c("Wrangle", "Compute"), main="Where is time spent?", col=c
 
 # Part 2
 
-## What we did in Part 1
-- concept
+## Recap Part 1
+- motivation
+- table concept
+- teams, projects, workflows
+- visual wrangling (i.e. projections) using cross-tab
 
 ## Agenda Part 2
 
@@ -243,18 +260,43 @@ pie(c(80,20), labels=c("Wrangle", "Compute"), main="Where is time spent?", col=c
 ## tsne dimension reduction
 
 ```{r results = 'asis'}
-data <- data.frame(c("help", "me"), c(1,2))
+data <- data.frame(help=c(1,2), me= c(1,2))
 knitr::kable(data, caption = "Table with kable")
 ```
 
 ## Venn diagram
 
-- shiny venn
-- visual
-- output of venn 
+- install shiny venn operator
+- add a data step to the t-test
+- put pvalues as y-axis
+- left tab output of venn
 
-## export
+## Export your data
 
-## summary 
+- add an export step to venn
+- run
+- data is the project 
+
+
+## Summary
+
+- install operators
+- run operators
+- view the operator results
+- operator relations
+- operator examples, t-test, anova
+- venn shiny operator
+- export
+
+## Afternoon
+
+- one-2-one sessions
+- practice
+- bring your own data
+
+## Lunch time
+
+<center><img src="../images/lunch.png"/></center>
+
 
 
