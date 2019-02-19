@@ -14,6 +14,11 @@ knitr::opts_chunk$set(echo = FALSE)
 ## Welcome, blast off at 09:00
 <center><img src="../images/rocket.gif" height="300px" /></center>
 
+
+<center>workshop on github </center>
+
+<center>(https://github.com/tercen/user_workshop)</center>
+
 ## Agenda
 
 - intro to Tercen
@@ -39,7 +44,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 <center><img src="../images/fish2.gif" height="200px" /></center>
 
-## Tool Challenge
+## Tools evolution
 
 * Excel and Graphpad go so far...
 * Learning R/Python takes time
@@ -47,39 +52,29 @@ knitr::opts_chunk$set(echo = FALSE)
 * Partek, Galaxy, Flowjo good  but not interactive and flexible
 * Working in groups
 
+<center><img src="../images/tool_evolution.png" /></center>
 ## Thus....
 
 <center><img src="../images/tercencloud.png"></center>
 <center><img src="../images/alpha2beta.png"></center>
 
 ## Features
-* Generate any visual
-* Visual computation
-* Workflow analysis and customization
-* Integrate external knowledge
-* Sharing data and analysis
-* Results reporting
-* Project centric analysis
-* Data provenance
-* Add operators or apps (i.e. plug-ins)
-* Programmatic access (Tercen API)
-* Cloud hosted or on-site
-* Zero install
 
-<center><img src="../images/tercen_collaboration.png"></center>
+* Store
+* Compute
+* Visualize
+
+<center><img src="../images/tercen_collaboration.png " height="300px"></center>
 
 
 ## Concepts and terms
 
-- measurement
-- variable
-- observation
-- annotation
-- all of the above are called factors
-- long format vs wide format
-- table
-- compute on the table
-- computed table
+- measurement (e.g. gene expression value)
+- variable (e.g. gene)
+- observation (e.g. samples )
+- annotation (e.g. of genes or sample)
+
+<center>all are factors!!!</center>
 
 ## Wide format
 
@@ -95,7 +90,6 @@ data <- read.delim2(file = file.path("..", "data","genes_long.tsv"))
 knitr::kable(data[1:6,], align = "lll")
 ``` 
 
-
 ## Computed table
 
 After a mean operator of all genes per sample:
@@ -104,6 +98,7 @@ After a mean operator of all genes per sample:
 data <- read.delim2(file = file.path("..", "data","genes_mean.tsv")) 
 knitr::kable(data[1:2,], align = "lll")
 ``` 
+
 
 ## Wrangling
 
@@ -130,7 +125,7 @@ pie(c(80,20), labels=c("Wrangle", "Compute"), main="Where is time spent?", col=c
 
 https://tercen.age.mpg.de/  __email password__
 
-https://dev.tercen.com/  `researcher iamempowered`
+https://dev.tercen.com/  `lucy habilis`
 
 http://localhost:5400/   `admin admin`  
   
@@ -139,13 +134,15 @@ The [desktop setup](https://drive.google.com/open?id=1y1Jh4wB4fZVB8q3rbRNpY0hgrv
 
 ## Create a team
 
-- create a team
-- double click on team
-- create a project
+- login
+- create a team using your name
+- click on team
+- create a project, give it any name
 
 ## Get the data
 
 - get the data
+  - (https://raw.githubusercontent.com/tercen/user_workshop/master/data/khan_long.csv)
 - download the data to your machine
 - look at data with excel
 
@@ -189,6 +186,7 @@ The [desktop setup](https://drive.google.com/open?id=1y1Jh4wB4fZVB8q3rbRNpY0hgrv
 ## Heatmap
 
 - create a heatmap
+- resize
 
 ## Welcome to Tercen
 <center><img src="../images/welldone.png"/></center>
@@ -202,6 +200,10 @@ The [desktop setup](https://drive.google.com/open?id=1y1Jh4wB4fZVB8q3rbRNpY0hgrv
 - squashing/expanding rows
 - squashing/expanding columns
 - squashing/expanding cell/datapoint
+
+## Color palettes
+- different types
+- different values
 
 ## Bar graphs (sample replicates)
 - create a bar graph
@@ -247,9 +249,8 @@ To go down:
 - computation
 - group comparisons (e.g. t-test, anova)
 - dimension reduction (e.g. pca, tsne)
-- clustering (e.g. hierarchical clustering)
 - venn diagrams (e.g. shiny venn)
-- using biological database (e.g. protein atlas)
+- using biological database (e.g. adding gene annotation)
 - exporting
 
 ## Computation concepts
@@ -305,13 +306,6 @@ To go down:
 - use color to determine two group per cell
 - output is p value per cell
 
-## PCA dimension reduction
-
-- variables on rows
-- observations on cols
-- measurement on y-axis
-- output is a returned per col
-
 ## TSNE dimension reduction
 
 - variables on rows
@@ -319,6 +313,24 @@ To go down:
 - measurement on y-axis
 - output is a returned per col
 - perplexity setting !!!!
+
+## PCA dimension reduction
+
+- variables on rows
+- observations on cols
+- measurement on y-axis
+- output is a returned per col
+
+## Gather step
+
+- many columns to two columns
+- one annotation (i.e. variables) and one measurement (i.e. value)
+- same as wide to long concept
+- abstraction
+
+Wide -> Long = abstraction
+
+
 
 ## Install Shiny Venn operator
 - not in app store but on git tercen
@@ -368,3 +380,4 @@ To go down:
 
 <left><img src="../images/tercen-book.png"/></left>
 <right><img src="../images/tercen-app-guide.png"/></right>
+
