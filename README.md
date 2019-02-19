@@ -22,17 +22,14 @@ __User Workshop Agenda__
 |           | 09:00 | __Start__
 |           |       | concepts (e.g. measurements, table, computed table)
 |           |       | loading up data (e.g. csv and tsv)
-|           |       | loading up annotations (e.g. csv and tsv)
 |           |       | creating views (e.g. heatmaps, line graphs, profiles)
-|           |       | data wrangling (e.g. gather, join)
-|           |       | pre-processing data (e.g. log, arsinh)
-|           |       | group comparisons (e.g. t-test, anova)
 |           | 10:15 | __Coffee__
-|           | 10:30 | dimension reduction (e.g. pca, tsne)
+|           | 10:30 | computation, operators
+|           |       | group comparisons (e.g. t-test, anova)
+|           |       | dimension reduction (e.g. pca, tsne)
 |           |       | clustering (e.g. hierarchical clustering)
 |           |       | venn diagrams (e.g. shiny venn)
-|           |       | GO enrichment (e.g. shiny cellplot)
-|           |       | using biological database (e.g. protein atlas)
+|           |       | using biological database (e.g. gene info)
 |           |       | exporting
 |           | 12:30 | __Lunch__
 |Afternoon  |       |

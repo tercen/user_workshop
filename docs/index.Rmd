@@ -1,6 +1,8 @@
 ---
 title: "User Workshop"
-output: ioslides_presentation
+output:
+  ioslides_presentation:
+    css: styles.css
 ---
 
 ```{r setup, include=FALSE}
@@ -9,8 +11,8 @@ knitr::opts_chunk$set(echo = FALSE)
 
 # Part 1
 
-## Welcome
-<center><img src="../images/sunrise.gif"></center>
+## Welcome, blast off at 09:00
+<center><img src="../images/rocket.gif" height="300px" /></center>
 
 ## Agenda
 
@@ -26,9 +28,8 @@ knitr::opts_chunk$set(echo = FALSE)
 
 - the story
 
-## Challenges
 
-__Biologist's__ challenges:
+## Researcher's Challenges
 
 * Get control of data
 * Handle large data sizes
@@ -36,12 +37,20 @@ __Biologist's__ challenges:
 * Integrate external databases
 * Visual Interaction
 
-__Bioinformatician's__ challenges:
+<center><img src="../images/fish2.gif" height="200px" /></center>
 
-* Validate methodologies
-* Improve analysis quality
-* Educate biologists on statistical techniques
-* Reduce time spent on IT support
+## Tool Challenge
+
+* Excel and Graphpad go so far...
+* Learning R/Python takes time
+* Not everyone wants or have the time to learn Programming
+* Partek, Galaxy, Flowjo good  but not interactive and flexible
+* Working in groups
+
+## Thus....
+
+<center><img src="../images/tercencloud.png"></center>
+<center><img src="../images/alpha2beta.png"></center>
 
 ## Features
 * Generate any visual
@@ -72,6 +81,30 @@ __Bioinformatician's__ challenges:
 - compute on the table
 - computed table
 
+## Wide format
+
+```{r results = 'asis'}
+data <- read.delim2(file = file.path("..", "data","genes_wide.tsv")) 
+knitr::kable(data[, 1:3], align = "lll")
+```
+
+## Long format
+
+```{r results = 'asis'}
+data <- read.delim2(file = file.path("..", "data","genes_long.tsv")) 
+knitr::kable(data[1:6,], align = "lll")
+``` 
+
+
+## Computed table
+
+After a mean operator of all genes per sample:
+
+```{r results = 'asis'}
+data <- read.delim2(file = file.path("..", "data","genes_mean.tsv")) 
+knitr::kable(data[1:2,], align = "lll")
+``` 
+
 ## Wrangling
 
 - visual wrangling
@@ -95,9 +128,14 @@ pie(c(80,20), labels=c("Wrangle", "Compute"), main="Where is time spent?", col=c
 
 ## Let's start
 
-- get tercen
-- otherwise use the desktop version
-- login
+https://tercen.age.mpg.de/  __email password__
+
+https://dev.tercen.com/  `researcher iamempowered`
+
+http://localhost:5400/   `admin admin`  
+  
+
+The [desktop setup](https://drive.google.com/open?id=1y1Jh4wB4fZVB8q3rbRNpY0hgrveNOWW8)
 
 ## Create a team
 
@@ -140,6 +178,7 @@ pie(c(80,20), labels=c("Wrangle", "Compute"), main="Where is time spent?", col=c
 - row zone
 - column zone
 - y-axis zone
+- Table tab, Computed Table tab
 
 ## Points
 
@@ -241,40 +280,66 @@ To go down:
 - hclust (per row, per col)
 - pca (per col)
 
+## Install operators
+
+- go to the Team
+- check "My site"
+- go to "Install"
+- Tercen, Site, Git
+- go to "Tercen"
+  - mean, t-test, anova-1, pca, tsne
+
+
+
 ## Anova-1 way
+
 - row zone put gene_id (i.e. the variable)
 - col zone put sample (i.e. the observation)
 - data of multi-group into one cell  
 - use color to determine
 
 ## T-test
+
 - use y-axis for measurement
 - data of two groups per cell
 - use color to determine two group per cell
 - output is p value per cell
 
-## pca dimension reduction
-- use color to determine multiple group 
+## PCA dimension reduction
+
+- variables on rows
+- observations on cols
+- measurement on y-axis
 - output is a returned per col
 
-## tsne dimension reduction
+## TSNE dimension reduction
 
-```{r results = 'asis'}
-data <- data.frame(help=c(1,2), me= c(1,2))
-knitr::kable(data, caption = "Table with kable")
-```
+- variables on rows
+- observations on cols
+- measurement on y-axis
+- output is a returned per col
+- perplexity setting !!!!
+
+## Install Shiny Venn operator
+- not in app store but on git tercen
+- go to the Team
+- check "My site"
+- go to "Install"
+- Tercen, Site, Git
+- go to "Git"
+  - for Url use (`https://github.com/tercen/venn_shiny_operator`)
+  - for Version use `1.0.4`
+
 
 ## Venn diagram
 
-- install shiny venn operator
 - add a data step to the t-test
 - put pvalues as y-axis
 - left tab output of venn
 
 ## Export your data
 
-- add an export step to venn
-- run
+- add an export step to t-test
 - data is the project 
 
 
@@ -299,4 +364,7 @@ knitr::kable(data, caption = "Table with kable")
 <center><img src="../images/lunch.png"/></center>
 
 
+## Guides
 
+<left><img src="../images/tercen-book.png"/></left>
+<right><img src="../images/tercen-app-guide.png"/></right>
