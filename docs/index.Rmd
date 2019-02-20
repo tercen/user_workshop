@@ -46,16 +46,14 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Tools evolution
 
-* Excel and Graphpad go so far...
-* Learning R/Python takes time
-* Not everyone wants or have the time to learn Programming
-* Partek, Galaxy, Flowjo good  but not interactive and flexible
-* Working in groups
-
+* Calculators, log tables (_homo homini_)
+* Excel and Graphpad (_homo australopithecus e.g. Lucy_)
+* Tercen (_homo habilis_)
+* Unknown (_homo sapien_)
 <center><img src="../images/tool_evolution.png" /></center>
 ## Thus....
 
-<center><img src="../images/tercencloud.png"></center>
+<center><img src="../images/tercen_logo_name.png" height="200px" ></center>
 <center><img src="../images/alpha2beta.png"></center>
 
 ## Features
@@ -202,6 +200,7 @@ The [desktop setup](https://drive.google.com/open?id=1y1Jh4wB4fZVB8q3rbRNpY0hgrv
 - squashing/expanding cell/datapoint
 
 ## Color palettes
+
 - different types
 - different values
 
@@ -272,7 +271,7 @@ To go down:
 
 - github operators
 - applibrary
-- operator help
+- operator help 
 
 ## Tercen operator examples
 
@@ -346,8 +345,14 @@ Wide -> Long = abstraction
 ## Venn diagram
 
 - add a data step to the t-test
-- put pvalues as y-axis
-- left tab output of venn
+- left tab output "operator view" of venn
+
+
+## Join
+- download the data
+- upload to tercen
+- add a join step
+- make a view with new factors
 
 ## Export your data
 
