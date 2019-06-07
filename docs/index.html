@@ -4,7 +4,6 @@
   <title>User Workshop</title>
 
   <meta charset="utf-8">
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
   <meta name="generator" content="pandoc" />
 
@@ -250,7 +249,6 @@ background: black;
 }
 
 slides > slide {
-display: none;
 font-family: 'Open Sans', Arial, sans-serif;
 font-size: 26px;
 color: #797979;
@@ -271,17 +269,19 @@ transition: all 0.6s ease-in-out;
 }
 
 slides > slide.far-past {
-display: none;
 }
 
 slides > slide.past {
-display: block;
 opacity: 0;
 }
 
 slides > slide.current {
 display: block;
 opacity: 1;
+z-index: 1;
+}
+slides > slide:not(.current) {
+z-index: 0;
 }
 
 slides > slide.current .auto-fadein {
@@ -296,13 +296,11 @@ background-size: 100% 100%;
 }
 
 slides > slide.next {
-display: block;
 opacity: 0;
 pointer-events: none;
 }
 
 slides > slide.far-next {
-display: none;
 }
 
 slides > slide.dark {
@@ -374,8 +372,6 @@ width: 1100px;
 
 slides.layout-widescreen > slide.far-past,
 slides.layout-faux-widescreen > slide.far-past {
-display: block;
-display: none;
 -webkit-transform: translate(-2260px);
 -moz-transform: translate(-2260px);
 -ms-transform: translate(-2260px);
@@ -409,8 +405,6 @@ pointer-events: none;
 
 slides.layout-widescreen > slide.far-next,
 slides.layout-faux-widescreen > slide.far-next {
-display: block;
-display: none;
 -webkit-transform: translate(2260px);
 -moz-transform: translate(2260px);
 -ms-transform: translate(2260px);
@@ -1341,6 +1335,13 @@ opacity: 1;
 
 .overview .slide-area {
 display: none;
+}
+slides > slide {
+background: linear-gradient(#ffffff, #ffffff 85%, #e6e6e6);
+background-color: white;
+}
+slides > slide {
+opacity: 0;
 }
 @media print {
 
@@ -3067,6 +3068,10 @@ if (document.readyState !== "loading" &&
       font-style: italic;
     }
 
+    summary {
+      display: list-item;
+    }
+
     slides > slide {
       -webkit-transition: all 0.4s ease-in-out;
       -moz-transition: all 0.4s ease-in-out;
@@ -3082,6 +3087,10 @@ if (document.readyState !== "loading" &&
       transition: opacity 0.6s ease-in 0.4s;
       opacity: 0;
     }
+/* https://github.com/ropensci/plotly/pull/524#issuecomment-468142578 */
+slide:not(.current) .plotly.html-widget{
+  display: block;
+}
 
   </style>
 
@@ -3142,14 +3151,14 @@ workshop on github
 <li>the story</li>
 </ul>
 
-</article></slide><slide class=""><hgroup><h2>Researcher’s Challenges</h2></hgroup><article  id="researchers-challenges">
+</article></slide><slide class=""><hgroup><h2>Bioinformatician’s Challenges</h2></hgroup><article  id="bioinformaticians-challenges">
 
 <ul>
-<li>Get control of data</li>
-<li>Handle large data sizes</li>
-<li>Reduce analysis time</li>
-<li>Integrate external databases</li>
-<li>Visual Interaction</li>
+<li>Validate methodologies</li>
+<li>Improve analysis quality</li>
+<li>Educate biologists on statistical techniques</li>
+<li>Reduce time spent on IT support</li>
+<li>Change the culture</li>
 </ul>
 
 <center>
@@ -3161,7 +3170,7 @@ workshop on github
 </article></slide><slide class=""><hgroup><h2>Tools evolution</h2></hgroup><article  id="tools-evolution">
 
 <ul>
-<li>Calculator (<em>homo homini</em>)</li>
+<li>Calculators, log tables (<em>homo homini</em>)</li>
 <li>Excel and Graphpad (<em>homo australopithecus e.g. Lucy</em>)</li>
 <li>Tercen (<em>homo habilis</em>)</li>
 <li>Unknown (<em>homo sapien</em>)
@@ -3300,6 +3309,22 @@ all are factors!!!
 </tr>
 </table>
 
+</article></slide><slide class=""><hgroup><h2>Relational algebra</h2></hgroup><article  id="relational-algebra">
+
+<ul>
+<li>how to define a relation between two Tables</li>
+<li>operators create new Tables (but also relations)</li>
+<li>relations between tables</li>
+<li>more info (<a href='https://en.wikipedia.org/wiki/Relational_algebra' title=''>https://en.wikipedia.org/wiki/Relational_algebra</a>)</li>
+<li>be careful of vocabulary</li>
+</ul>
+
+</article></slide><slide class=""><hgroup><h2>Univeral table</h2></hgroup><article  id="univeral-table">
+
+<ul>
+<li>Tercen sees all the tables as one</li>
+</ul>
+
 </article></slide><slide class=""><hgroup><h2>Wrangling</h2></hgroup><article  id="wrangling">
 
 <ul>
@@ -3331,75 +3356,21 @@ all are factors!!!
 
 <p>The <a href='https://drive.google.com/open?id=1y1Jh4wB4fZVB8q3rbRNpY0hgrveNOWW8' title=''>desktop setup</a></p>
 
-</article></slide><slide class=""><hgroup><h2>Create a team</h2></hgroup><article  id="create-a-team">
+</article></slide><slide class=""><hgroup><h2>Install dev enviroment</h2></hgroup><article  id="install-dev-enviroment">
 
 <ul>
-<li>login</li>
-<li>create a team using your name</li>
-<li>click on team</li>
-<li>create a project, give it any name</li>
+<li>install RStudio</li>
+<li>install Tercen (<a href='https://github.com/tercen/tercen_docker' title=''>https://github.com/tercen/tercen_docker</a>)</li>
 </ul>
 
-</article></slide><slide class=""><hgroup><h2>Get the data</h2></hgroup><article  id="get-the-data">
+</article></slide><slide class=""><hgroup><h2>Install Tercen</h2></hgroup><article  id="install-tercen">
+
+</article></slide><slide class=""><hgroup><h2>Programming language</h2></hgroup><article  id="programming-language">
 
 <ul>
-<li>get the data
-
-<ul>
-<li>(<a href='https://raw.githubusercontent.com/tercen/user_workshop/master/data/khan_long.csv' title=''>https://raw.githubusercontent.com/tercen/user_workshop/master/data/khan_long.csv</a>)</li>
-</ul></li>
-<li>download the data to your machine</li>
-<li>look at data with excel</li>
-</ul>
-
-</article></slide><slide class=""><hgroup><h2>Create data in Tercen</h2></hgroup><article  id="create-data-in-tercen">
-
-<ul>
-<li>go to the project folder</li>
-<li>click on left, see &ldquo;create data&rdquo;</li>
-<li>upload the data to Tercen</li>
-<li>you should see the data in your project area</li>
-</ul>
-
-</article></slide><slide class=""><hgroup><h2>Create workflow in Tercen</h2></hgroup><article  id="create-workflow-in-tercen">
-
-<ul>
-<li>click on left, see &ldquo;Create workflow&rdquo;</li>
-<li>white canvas appears</li>
-<li>right click on graph and &ldquo;Add step&rdquo;</li>
-<li>add a Table step</li>
-<li>add a Data step</li>
-</ul>
-
-</article></slide><slide class=""><hgroup><h2>Cross-tab zone</h2></hgroup><article  id="cross-tab-zone">
-
-<ul>
-<li>left area are factors in the factor zone</li>
-<li>right area is the graph zone</li>
-<li>drag factors from left to right</li>
-<li>filter zone</li>
-<li>color zone</li>
-<li>label zone</li>
-<li>x-axis zone</li>
-<li>row zone</li>
-<li>column zone</li>
-<li>y-axis zone</li>
-<li>Table tab, Computed Table tab</li>
-</ul>
-
-</article></slide><slide class=""><hgroup><h2>Points</h2></hgroup><article  id="points">
-
-<ul>
-<li>variables as rows</li>
-<li>observations as column</li>
-<li>measurement as a y-axis</li>
-</ul>
-
-</article></slide><slide class=""><hgroup><h2>Heatmap</h2></hgroup><article  id="heatmap">
-
-<ul>
-<li>create a heatmap</li>
-<li>resize</li>
+<li>R, R package</li>
+<li>Python, module (coming soon)</li>
+<li>Matlab</li>
 </ul>
 
 </article></slide><slide class=""><hgroup><h2>Welcome to Tercen</h2></hgroup><article  id="welcome-to-tercen">
@@ -3617,8 +3588,16 @@ all are factors!!!
 
 <ul>
 <li>add a data step to the t-test</li>
-<li>put pvalues as y-axis</li>
-<li>left tab output of venn</li>
+<li>left tab output &ldquo;operator view&rdquo; of venn</li>
+</ul>
+
+</article></slide><slide class=""><hgroup><h2>Join</h2></hgroup><article  id="join">
+
+<ul>
+<li>download the data</li>
+<li>upload to tercen</li>
+<li>add a join step</li>
+<li>make a view with new factors</li>
 </ul>
 
 </article></slide><slide class=""><hgroup><h2>Export your data</h2></hgroup><article  id="export-your-data">

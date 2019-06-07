@@ -34,13 +34,13 @@ knitr::opts_chunk$set(echo = FALSE)
 - the story
 
 
-## Researcher's Challenges
+## Bioinformatician's Challenges
 
-* Get control of data
-* Handle large data sizes
-* Reduce analysis time
-* Integrate external databases
-* Visual Interaction
+* Validate methodologies
+* Improve analysis quality
+* Educate biologists on statistical techniques
+* Reduce time spent on IT support
+* Change the culture
 
 <center><img src="../images/fish2.gif" height="200px" /></center>
 
@@ -97,6 +97,15 @@ data <- read.delim2(file = file.path("..", "data","genes_mean.tsv"))
 knitr::kable(data[1:2,], align = "lll")
 ``` 
 
+## Relational algebra
+- how to define a relation between two Tables
+- operators create new Tables (but also relations)
+- relations between tables
+- more info (https://en.wikipedia.org/wiki/Relational_algebra)
+- be careful of vocabulary
+
+## Univeral table
+- Tercen sees all the tables as one
 
 ## Wrangling
 
@@ -130,61 +139,21 @@ http://localhost:5400/   `admin admin`
 
 The [desktop setup](https://drive.google.com/open?id=1y1Jh4wB4fZVB8q3rbRNpY0hgrveNOWW8)
 
-## Create a team
+## Install dev enviroment
 
-- login
-- create a team using your name
-- click on team
-- create a project, give it any name
+- install RStudio
+- install Tercen (https://github.com/tercen/tercen_docker)
 
-## Get the data
-
-- get the data
-  - (https://raw.githubusercontent.com/tercen/user_workshop/master/data/khan_long.csv)
-- download the data to your machine
-- look at data with excel
-
-## Create data in Tercen 
-
-- go to the project folder
-- click on left, see "create data"
-- upload the data to Tercen
-- you should see the data in your project area
-
-## Create workflow in Tercen
-
-- click on left, see "Create workflow"
-- white canvas appears
-- right click on graph and "Add step"
-- add a Table step
-- add a Data step
+## Install Tercen
 
 
+## Programming language
 
-## Cross-tab zone
+- R, R package
+- Python, module (coming soon) 
+- Matlab
 
-- left area are factors in the factor zone
-- right area is the graph zone
-- drag factors from left to right
-- filter zone
-- color zone
-- label zone
-- x-axis zone
-- row zone
-- column zone
-- y-axis zone
-- Table tab, Computed Table tab
 
-## Points
-
-- variables as rows
-- observations as column 
-- measurement as a y-axis
-
-## Heatmap
-
-- create a heatmap
-- resize
 
 ## Welcome to Tercen
 <center><img src="../images/welldone.png"/></center>
